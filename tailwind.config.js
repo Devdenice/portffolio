@@ -4,23 +4,39 @@ export default {
   darkMode: "class",
   theme: {
     screens: {
-      mobile: "360px",
-      sm: "480px",
+      xxs: "320px",
+
+      xs: "480px",
+
+      sm: "640px",
+
       md: "768px",
-      lg: "976px",
-      xl: "1440px",
-      "2xl": "1560px",
-      "3xl": "1920px",
+
+      lg: "1024px",
+
+      xl: "1280px",
+
+      "2xl": "1536px",
+    },
+    fontFamily: {
+      sans: ["Roboto", "sans-serif"],
+      serif: ["IBM Plex Serif", "serif"],
     },
     extend: {
       animation: {
         "zoom-in-zoom-out": "zoom-in-zoom-out 2s ease-in-out infinite",
+        linedown: "linedown 2s ease-in-out infinite",
       },
       keyframes: {
         "zoom-in-zoom-out": {
           "0%": { transform: "scale(1,1) " },
-          "50%": { transform: "scale(1.5,1.5) " },
-          "100%": { transform: "scale(1,1) " },
+          // "50%": { transform: "scale(1.5,1.5) " },
+          "100%": { transform: "scale(1.5,1.5) " },
+        },
+        linedown: {
+          "0%": { transform: "scaleY(0) " },
+          // "50%": { transform: "scale(1.5,1.5) " },
+          "100%": { transform: "scaleY(1) " },
         },
       },
     },

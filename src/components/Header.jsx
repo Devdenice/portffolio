@@ -19,22 +19,38 @@ const Header = () => {
     }
   };
 
+  const headerlinks = [
+    {
+      name: "About",
+    },
+    {
+      name: "Experience",
+    },
+    {
+      name: "Work",
+    },
+    {
+      name: "Contact",
+    },
+  ];
+
   return (
     <>
-      <div className="navbar bg-base-100 w-11/12 mobile:max-md:w-10/12 md:max-lg:w-11/12 lg:max-xl:w-11/12 xl:max-3xl:w-10/12 mx-auto mt-3">
+      <div className="z-20 navbar w-11/12 mx-auto xxs:max-md:w-11/12 lg:max-2xl:w-11/12">
         <div className="flex-1">
           <img src={LogoD} className="w-10" alt="Logo" />
         </div>
-        <div className="flex-none mobile:max-md:hidden ">
-          <div className="flex justify-between w-[430px] items-center">
-            <div>About</div>
-            <div>Experience</div>
-            <div>Work</div>
-            <div>Contact</div>
-            <button className="btn btn-square btn-outline btn-primary border-1 btn-sm w-auto rounded-md items-center flex px-3 normal-case">
+        <div className="z-20 flex-none xxs:max-md:hidden">
+          <div className="flex justify-between w-[430px] items-center font-sans font-medium">
+            {headerlinks?.map((links, index) => (
+              <div key={index} className="hover:text-primary cursor-pointer ">
+                {links.name}
+              </div>
+            ))}
+            <button className="btn z-20 btn-square btn-outline btn-primary border-1 btn-sm w-auto rounded-md items-center flex px-3 normal-case">
               Resume
             </button>
-            <label className="swap swap-rotate">
+            <label className="z-20 swap swap-rotate">
               {/* this hidden checkbox controls the state */}
               <input type="checkbox" onChange={handleToggleTheme} />
 
@@ -58,7 +74,7 @@ const Header = () => {
             </label>
           </div>
         </div>
-        <div className="flex-none md:max-3xl:hidden">
+        <div className="flex-none md:max-2xl:hidden">
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
@@ -78,7 +94,7 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-auto"
+              className="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-auto font-sans font-[500]"
             >
               <li>
                 <a>About</a>
