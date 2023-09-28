@@ -42,8 +42,8 @@ const Hero = () => {
   return (
     <>
       <div className="z-20 w-full h-full border-2 border-blue-600 flex items-center">
-        <div className="grid xxs:max-lg:grid-cols-1 lg:max-2xl:grid-cols-3 w-11/12 mx-auto  gap-6 justify-items-center ">
-          <div className="border-2 border-red-400 text-center flex flex-col gap-2">
+        <div className=" grid xxs:max-lg:grid-cols-1 lg:max-2xl:grid-cols-3 w-11/12 mx-auto gap-6 justify-items-center lg:max-2xl:flex  ">
+          <div className="relative border-2 border-red-400 text-center flex flex-col gap-2 lg:max-2xl:order-2 lg:max-2xl:text-left lg:max-2xl:flex lg:max-xl:ml-16 justify-center">
             <h4 className="text-2xl font-medium">Hello!</h4>
             <h1 className="text-4xl font-bold">
               I&apos;m{" "}
@@ -54,7 +54,7 @@ const Hero = () => {
                 </span>
               </span>
             </h1>
-            <p className="text-base px-2 sm:max-md:text-lg">
+            <p className="text-base px-2 sm:max-md:text-xl sm:max-md:px-16 md:max-lg:text-xl md:max-lg:px-24">
               I&apos;m an aspiring Front-End Web Developer with a passion for
               crafting visually appealing and user-friendly websites. I possess
               a strong foundation in HTML, CSS, and JavaScript, coupled with a
@@ -62,14 +62,14 @@ const Hero = () => {
               experiences.
             </p>
           </div>
-          <div className="border-2 border-red-400">
+          <div className="z-20 border-2 border-red-400 lg:max-2xl:order-3">
             <img
-              className="xxs:max-xs:max-w-xxs xs:max-sm:max-w-sm sm:max-md:max-w-md md:max-lg:max-w-lg"
+              className="xxs:max-xs:max-w-xxs xs:max-sm:max-w-sm sm:max-md:max-w-md md:max-lg:max-w-lg lg:max-xl:max-w-md"
               src={Image}
               alt=""
             />
           </div>
-          <div className="z-20 flex border-2 border-red-400">
+          <div className="absolute bottom-0 z-20 flex border-2 border-red-400 lg:max-2xl:order-1 lg:max-2xl:flex-col items-center">
             {socialIcons?.map((socialIcon, index) => (
               <a key={index} href="#">
                 <div className="hover:text-primary hover:scale-125 hover:ease-in-out hover:duration-700">
@@ -77,6 +77,7 @@ const Hero = () => {
                 </div>
               </a>
             ))}
+            <div className="w-0.5 h-20 bg-primary mobile:max-lg:hidden origin-top animate-linedown"></div>
           </div>
         </div>
       </div>
