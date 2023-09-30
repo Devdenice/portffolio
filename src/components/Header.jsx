@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="z-20 navbar w-11/12 mx-auto xxs:max-md:w-11/12 lg:max-2xl:w-11/12">
+      <div className="navbar w-11/12 mx-auto xxs:max-md:w-11/12 lg:max-2xl:w-11/12">
         <div className="flex-1">
           <img src={LogoD} className="w-10" alt="Logo" />
         </div>
@@ -74,7 +74,7 @@ const Header = () => {
             </label>
           </div>
         </div>
-        <div className="flex-none md:max-2xl:hidden">
+        <div className="z-20 flex-none md:max-2xl:hidden">
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
